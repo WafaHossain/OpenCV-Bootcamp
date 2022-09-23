@@ -1,0 +1,3 @@
+1. Apply warp perspective to the docs images inside resources
+
+2. Explore 2-3 new shapes inside OpenCV.
