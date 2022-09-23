@@ -17,14 +17,18 @@ import cv2
 #     if cv2.waitKey(30) & 0xFF == ord('q'):
 #         break
 
-cap = cv2.VideoCapture(0)
 
-cap.set(3, 640) #The number '3' to set width
-cap.set(4, 480) #The number '3' to set height
-while True:
-    success, img = cap.read()
-    # print(img.shape)
-    cv2.imshow('Output', img)
+  ###  Video Capture using Webcam
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+
+# cap = cv2.VideoCapture(0)
+
+# cap.set(3, 720) #The number '3' to set width
+# cap.set(4, 1440) #The number '3' to set height
+# while True:
+#     success, img = cap.read()
+#     # print(img.shape)
+#     cv2.imshow('Output', img)
+
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
