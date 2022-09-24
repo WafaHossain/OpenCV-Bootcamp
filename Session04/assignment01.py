@@ -3,7 +3,7 @@
 import cv2
 import numpy as np
 
-path = "Resources/lena.png"
+path = "Resources/Sleeping.jpg"
 
 def empty():
     pass
@@ -18,7 +18,8 @@ cv2.createTrackbar("Val Min", "TrackBar", 37, 255, empty)
 cv2.createTrackbar("Val Max", "TrackBar", 15, 255, empty)
 
 while True:
-    img = cv2.imread(path)
+    img_1 = cv2.imread(path)
+    img = cv2.resize(img_1, (450, 512))
     img_HSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     h_min = cv2.getTrackbarPos("Hue Min", "TrackBar")
@@ -30,8 +31,8 @@ while True:
 
     print(h_min, h_max, s_min, s_max, v_min, v_max)
     
-    lower = np.array([105,45,45])  
-    upper = np.array([255,255,255]) 
+    lower = np.array([h_min,s_min,v_min])  
+    upper = np.array([h_max,s_max,v_max]) 
     mask = cv2.inRange(img_HSV, lower, upper)
     img_result = cv2.bitwise_and(img, img,mask= mask)
 
