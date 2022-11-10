@@ -1,3 +1,8 @@
 opencv-python
 pandas
 flask
+notebook
+imutils
+scipy
+
+#conda install -c conda-forge dlib
